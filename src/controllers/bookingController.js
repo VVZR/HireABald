@@ -48,7 +48,7 @@ exports.getBooking = async (req, res, next) => {
     let weatherData = null;
     try {
       const weatherResponse = await axios.get(
-        `https://api.weatherapi.com/v1/forecast.json?key=demo&q=${booking.location}&dt=${booking.date.toISOString().split('T')[0]}`
+          `https://api.weatherapi.com/v1/forecast.json?key=${process.env.WEATHER_API_KEY}&q=${booking.location}&dt=${booking.date.toISOString().split('T')[0]}`
       );
       weatherData = {
         condition: weatherResponse.data.forecast.forecastday[0].day.condition.text,
