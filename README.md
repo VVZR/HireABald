@@ -58,6 +58,7 @@ MONGODB_URI=mongodb://localhost:27017/hireabald
 JWT_SECRET=your_secret_key
 JWT_EXPIRE=7d
 NODE_ENV=development
+WEATHER_API_KEY=your_weather_api_key_here
 ```
 
 5. Start the server
